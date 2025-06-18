@@ -16,7 +16,7 @@ export async function verifyWebhookSignature({
   webhookEvent,
 }: {
   headers: Headers;
-  webhookEvent: any;
+  webhookEvent: unknown;
 }): Promise<boolean> {
   const authAlgo = headers.get("PAYPAL-AUTH-ALGO");
   const certUrl = headers.get("PAYPAL-CERT-URL");
